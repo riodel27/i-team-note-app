@@ -9,11 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@editorjs/delimiter": "^1.2.0",
+    "@editorjs/editorjs": "^2.25.0",
+    "@editorjs/embed": "^2.5.2",
+    "@editorjs/header": "^2.6.2",
+    "@editorjs/list": "^1.7.0",
+    "@editorjs/marker": "^1.2.2",
+    "lodash": "^4.17.21",
     "next": "12.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-editor-js": "^2.1.0"
   },
   "devDependencies": {
+    "@editorjs/raw": "^2.3.1",
+    "@types/editorjs__header": "^2.6.0",
     "@types/node": "18.6.4",
     "@types/react": "18.0.16",
     "@types/react-dom": "18.0.6",
