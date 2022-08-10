@@ -15,6 +15,8 @@
     "@editorjs/header": "^2.6.2",
     "@editorjs/list": "^1.7.0",
     "@editorjs/marker": "^1.2.2",
+    "@prisma/client": "^4.2.0",
+    "axios": "^0.27.2",
     "lodash": "^4.17.21",
     "next": "12.2.4",
     "react": "18.2.0",
@@ -29,6 +31,7 @@
     "@types/react-dom": "18.0.6",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
+    "prisma": "^4.2.0",
     "typescript": "4.7.4"
   }
 }

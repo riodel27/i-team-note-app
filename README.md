@@ -33,6 +33,20 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-# resource
+## resources
 
-`https://github.com/pleasantweb/editor_js_with_next_js`
+- https://github.com/pleasantweb/editor_js_with_next_js
+
+- https://themodern.dev/learn/courses/322389284337222224?l=323312323315892817
+
+## Database
+
+- prisma orm
+- supabase
+- postgresql
+
+sync our Prisma schema with our database, keep track of the changes made to the database schema over time, and maintain our existing data in our database.
+
+```bash
+npx prisma migrate dev
+```

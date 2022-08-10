@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import EditorJS from "@editorjs/editorjs";
 import Header from "@editorjs/header";
+import axios from "axios";
 
 type propType = {
   setContent: React.Dispatch<React.SetStateAction<string>>;
@@ -40,6 +41,12 @@ const Editor = (props: propType) => {
     };
   }, []);
 
+  const handleSaveNote = async () => {
+    const data = await isInstance?.current?.save();
+
+    axios.post("/api/note", { data: JSON.stringify(data) });
+  };
+
   const initEditor = () => {
     const editor = new EditorJS({
       holder: EDITTOR_HOLDER_ID,
@@ -47,6 +54,10 @@ const Editor = (props: propType) => {
       onReady: () => {
         isInstance.current = editor;
       },
+      onChange: (api, event) => {
+        console.log("Now I know that Editor's content changed!");
+      },
+
       autofocus: true,
       tools: {
         header: {
@@ -65,6 +76,7 @@ const Editor = (props: propType) => {
       <div style={{ border: "1px solid grey", marginTop: "40px" }}>
         <div id={EDITTOR_HOLDER_ID}> </div>
       </div>
+      <button onClick={handleSaveNote}>save</button>
     </>
   );
 };
